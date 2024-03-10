@@ -6,6 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "external": "ionic s --external --no-open",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

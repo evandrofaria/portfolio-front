@@ -9,8 +9,18 @@
   --primary-color: #FFFFFF;
   --secondary-color: #5BADFF;
   --secondary-text: #C5C5C5;
+  --state-error: #F04146;
+  --state-warning: #FEA400;
+  --state-success: #7FA307;
   --gradient-gray: linear-gradient(180deg, #FFF 13.89%, rgba(253, 253, 253, 0.18) 83.33%);
   --card-color: #2A2A2A;
   --ion-background-color: #161513;
   --alternative-bg: #222222;
+  --ion-text-color: #FFFFFF;
+
+  /** Cores Ionic **/
+  --ion-color-primary: var(--primary-color);
+  --ion-color-secondary: var(--secondary-color);
+  --ion-color-danger: var(--state-error);
+  --ion-color-warning: var(--state-warning);
 }

@@ -1,4 +1,60 @@
 <app-default-header></app-default-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
+
+  <ng-container #sobre>
+    <!--<div class="content-center">-->
+
+
+    <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
+      <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800 mt-4"
+           src="assets/avatar-sticker.png" alt="Rounded avatar">
+
+      <p
+        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-wrap max-w-[740px]">
+        Desenvolvedor de software experiente em soluções inovadoras para o governo federal,
+        incluindo Ministério da Saúde, BRB e Ministério do Meio Ambiente.<br/>
+        Especializado em atender demandas complexas, adaptável e escalável.
+      </p>
+
+
+      <div class="flex flex-row mt-8 justify-between">
+        <ion-button mode="ios" color="secondary" shape="round" class="primary-button mr-4 h-16 my-0 mb-0">Download CV</ion-button>
+        <ion-button mode="ios" color="primary" shape="round" fill="outline" class="h-16 m-0">Fale comigo</ion-button>
+
+      </div>
+
+      <div class="flex flex-col text-center mt-6">
+
+        <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg">HABILIDADES</h1>
+
+        <div class="grid grid-cols-5 desktop:grid-cols-10 items-center mt-2">
+          <img src="assets/logos/html5-logo.png" alt="HTML5 Logo" class="m-2">
+          <img src="assets/logos/css-logo.png" alt="CSS3 Logo" class="m-2">
+          <img src="assets/logos/js-logo.png" alt="Javascript Logo" class="m-2">
+          <img src="assets/logos/ts-logo.png" alt="Typescript Logo" class="m-2">
+          <img src="assets/logos/angular-logo.png" alt="HTML5 Logo" class="m-2">
+          <img src="assets/logos/ionic-logo.png" alt="Ionic Logo" class="m-2">
+          <img src="assets/logos/tailwind-logo.png" alt="TailwindCSS Logo" class="m-2">
+          <img src="assets/logos/spring-logo.png" alt="Spring Logo" class="m-2">
+          <img src="assets/logos/react-logo.png" alt="React Logo" class="m-2">
+          <img src="assets/logos/next-logo.png" alt="Next.js Logo" class="m-2">
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!--<div class="flex flex-row">-->
+    <!--  <button class="btn btn-primary">Download CV</button>-->
+    <!--  <button class="btn btn-primary ml-8">Entrar em contato</button>-->
+    <!--</div>-->
+
+
+    <!--</div>-->
+  </ng-container>
+
 </ion-content>
