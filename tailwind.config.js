@@ -31,18 +31,17 @@ module.exports = {
     },
     plugins: [require('flowbite/plugin'), require("daisyui")],
     daisyui: {
-        prefix: {
-            prefix: "daisy-",
-            themes: [
-                    {
-                        mytheme: {
-                            "primary": "#FFFFFF",
-                            "secondary": "#5BADFF",
-                            "base-100": "#2A2A2A",
-                        },
-                    }
-                ]
-        }
+        prefix: "daisy-",
+        themes: [
+            {
+                mytheme: {
+                    "primary": "#FFFFFF",
+                    "secondary": "#5BADFF",
+                    "base-100": "#2A2A2A",
+                },
+            }
+        ]
+
     }
 }
 
