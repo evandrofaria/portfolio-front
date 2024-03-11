@@ -1,11 +1,12 @@
 <!--<app-default-header></app-default-header>-->
 
-<nav class="bg-alternative fixed w-full z-20 top-0 start-0">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+<!-- Header -->
+<nav class="default-navbar">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a (click)="scrollTo('sobre')" class="flex items-center space-x-3 rtl:space-x-reverse">
 
       <!--@TODO alterar logo-->
-      <img src="assets/logos/evandro-logo.png" class="h-14" alt="Evandro Faria Logo">
+      <img src="assets/logos/evandro-logo.svg" class="h-14" alt="Evandro Faria Logo">
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button data-collapse-toggle="navbar-sticky" type="button"
@@ -54,7 +55,7 @@
       <!--</div>-->
 
       <div class="flex flex-col text-center pt-10">
-        <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6">HABILIDADES</h1>
+        <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6 mobile:mb-4">HABILIDADES</h1>
 
         <div class="inline-flex flex-wrap justify-center items-center">
           <img src="assets/logos/html5-logo.png" alt="HTML5 Logo" class="m-2">
@@ -73,16 +74,16 @@
   </div>
 
   <!-- 2st section - Projetos -->
-  <div id="Projetos" class="pt-16">
+  <div id="Projetos" class="pt-10">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
-        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">PROJETOS</h1>
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-2xl mb-6 mobile:mb-4 underline !underline-offset-4">PROJETOS</h1>
 
         <!-- CARDS -->
         <div class="inline-flex flex-wrap justify-center items-center">
 
           <div
-            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4"
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-2"
             *ngFor="let item of projectList">
             <a href="#">
               <img class="rounded-t-lg" [src]="item.img"/>
@@ -101,30 +102,28 @@
   </div>
 
   <!-- 3st section - Experiencias -->
-  <div id="Experiencias" class="pt-16">
+  <div id="Experiencias" class="pt-10">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
-        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">EXPERIÊNCIAS</h1>
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">EXPERIÊNCIAS</h1>
 
         <!-- EXPERIENCIAS -->
         <ng-container *ngFor="let item of jobsList">
-          <ion-list>
+          <div class="mb-4 last:mb-0">
             <ion-item class="ion-no-padding" lines="none">
               <ion-thumbnail slot="start">
                 <img [src]="item.img"/>
               </ion-thumbnail>
-              <ion-label mode="md" class="ion-no-padding no-padding">
-                <p class="font-semibold !text-white !text-lg">{{item?.cargo}}</p>
-                <p class="!text-[#c5c5c5] tracking-[120%] !text-base">
-                  {{item?.empresa}}<br/>
-                  <span class="text-xs leading-loose">{{item?.periodo}}</span>
-                </p>
 
-              </ion-label>
+              <div class="flex flex-col">
+                <p class="font-semibold !text-white !text-lg">{{item?.cargo}}</p>
+                <p class="!text-[#c5c5c5] tracking-[120%] !text-base">{{item?.empresa}}</p>
+                <span class="text-xs">{{item?.periodo}}</span>
+              </div>
             </ion-item>
-            <p class="text-justify text-sm">{{item?.atribuicoes}}
+            <p class="text-justify text-sm mt-2">{{item?.atribuicoes}}
             </p>
-          </ion-list>
+          </div>
         </ng-container>
 
       </div>
@@ -132,10 +131,10 @@
   </div>
 
   <!-- 4st section - Educacao -->
-  <div id="Educacao" class="pt-16">
+  <div id="Educacao" class="pt-10">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
-        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">EDUCAÇÃO</h1>
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">EDUCAÇÃO</h1>
 
         <ng-container *ngFor="let item of educationList">
           <ion-list>

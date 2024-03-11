@@ -43,17 +43,10 @@
 
 ion-content {
   --background: var(--ion-background-color) !important;
-  --padding-top: 90px;
+  --padding-top: 100px;
   --padding-bottom: 90px;
   --padding-left: 16px;
   --padding-right: 16px;
-}
-
-.content-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
 }
 
 ion-label {
@@ -62,6 +55,7 @@ ion-label {
   }
 }
 
-//.primary-button {
-//  @apply h-16 rounded-[50px] bg-secondary-color text-primary py-4 px-7;
-//}
+.default-navbar {
+  @apply bg-alternative fixed w-full z-20 top-0 start-0;
+  box-shadow: 0 4.364px 16px -2.182px rgba(0, 0, 0, 0.10);
+}
