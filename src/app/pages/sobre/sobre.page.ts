@@ -8,46 +8,57 @@ export class SobrePage implements OnInit {
   menuList = [
     { section: 'Sobre', active: true },
     { section: 'Projetos', active: false },
-    { section: 'Experiencias', active: false },
-    { section: 'Educacao', active: false },
+    { section: 'Experiências', active: false },
+    { section: 'Educação', active: false },
     // { section: 'Contato', active: false }
   ];
 
   projectList = [
     {
-      img: './assets/investsus-card.svg',
+      img: './assets/investsus-card.png',
       name: 'InvestSUS',
-      description: 'Descrição do app',
+      badge: 'Ministério da Saúde',
+      description: 'O InvestSUS Cidadão melhora o acesso a informações de saúde e transparência em repasses do Fundo Nacional de Saúde, convidando a sociedade a acompanhar a aplicação de recursos no SUS, com detalhes acessíveis sobre a destinação de verbas federais.',
+      linkApple: 'https://apps.apple.com/br/app/investsus-cidad%C3%A3o/id1471696623',
+      linkGoogle: 'https://play.google.com/store/apps/details?id=br.gov.ms.investsus',
     },
     {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
+      img: './assets/mbk-card.png',
+      name: 'BRB Mobile',
+      badge: 'Banco BRB',
+      description: 'O BRB Mobile foi desenvolvido para revolucionar a gestão financeira, permite abrir contas digitais gratuitas, oferecendo serviços como cartão de crédito, empréstimos competitivos, pagamento via PIX, seguros e investimentos, tudo de forma simplificada.',
+      linkApple: 'https://apps.apple.com/br/app/brb-mobile/id1005747186',
+      linkGoogle: 'https://play.google.com/store/apps/details?id=la.foton.brb.myphone',
     },
     {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
+      img: './assets/superapp-card.png',
+      name: 'SuperApp MMA',
+      badge: 'Ministério do Meio Ambiente',
+      description: 'O SuperApp do MMA oferece um hub para serviços ambientais, com funcionalidades como monitoramento da balneabilidade das praias e qualidade do ar, através de miniapps interativos. Visa a melhor experiência e acesso facilitado a informações ambientais.',
+      linkApple: 'https://apps.apple.com/br/app/superapp-mma/id1608190929',
+      linkGoogle: 'https://play.google.com/store/apps/details?id=br.gov.mma.superapp',
     },
     {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
+      img: './assets/conectesus-card.png',
+      name: 'Meu SUS Digital',
+      badge: 'Ministério da Saúde',
+      description: 'O Meu SUS Digital foi desenvolvido para gerenciar a saúde  pessoal do usuário, permitindo o acompanhamento de histórico clínico, localização de serviços de saúde, certificado de vacinação, gerenciamento de adesões a programas e localização de serviços.',
+      linkApple: 'https://apps.apple.com/br/app/meu-sus-digital/id1045754608',
+      linkGoogle: 'https://play.google.com/store/apps/details?id=br.gov.datasus.cnsdigital',
     },
     {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
+      img: './assets/pcn-card.png',
+      name: 'BRB Crédito Imobiliário',
+      badge: 'Banco BRB',
+      description: 'O BRB é um simulador de financiamento imobiliário, visando melhorar a experiência do usuário com uma interface amigável. A ferramenta facilita a consulta e o planejamento financeiro para financiamento imobiliário, com respostas rápidas e uma análise de crédito mais ágil.',
+      linkWeb: '#',
     },
     {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
-    },
-    {
-      img: './assets/investsus-card.svg',
-      name: 'InvestSUS',
-      description: 'Descrição do app',
+      img: './assets/nexia-card.png',
+      name: 'Nexia',
+      badge: 'Zello Tecnologia',
+      description: 'A Nexia é uma inteligência artificial que centraliza, analisa e encontra padrões em seus dados. Por meio do aprendizado de máquina, a ferramenta faz cruzamentos de grande volume de dados para gerar insights apoiando na tomada decisões, com informações de qualidade, mais rápido do que nunca.',
+      linkWeb: 'https://www.nexia.ai/',
     },
   ];
 
@@ -74,7 +85,6 @@ export class SobrePage implements OnInit {
       atribuicoes: 'Responsável por desenvolver sites e aplicações usando C# e ASP.NET. Familiarizado com plataformas CMS, incluindo WordPress e Elementor, além de criar e manter bancos de dados SQL Server.'
     }
   ];
-
   educationList = [
     {
       img: './assets/logos/ceub-logo.jpeg',
