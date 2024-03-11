@@ -119,17 +119,17 @@
 
                   <div class="text-left rtl:text-right">
                     <div class="mb-1 text-xs">Visualizar no</div>
-                    <div class="-mt-1 font-sans text-sm font-semibold">Navegador</div>
+                    <div class="-mt-1 font-sans text-sm font-semibold">Google Play</div>
                   </div>
                 </a>
 
-                <a *ngIf="item.linkWeb && !item.linkGoogle" [href]="item.linkGoogle" target="_blank"
+                <a *ngIf="item.linkWeb && !item.linkGoogle" [href]="item.linkWeb" target="_blank"
                    class="w-full sm:w-auto hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <ion-icon name="globe-outline" class="me-3 w-7 h-7"></ion-icon>
 
                   <div class="text-left rtl:text-right">
-                    <div class="mb-1 text-xs">Visualizar na</div>
-                    <div class="-mt-1 font-sans text-sm font-semibold">Web</div>
+                    <div class="mb-1 text-xs">Visualizar no</div>
+                    <div class="-mt-1 font-sans text-sm font-semibold">Navegador</div>
                   </div>
                 </a>
               </div>
