@@ -10,7 +10,7 @@ export class SobrePage implements OnInit {
     { section: 'Projetos', active: false },
     { section: 'Experiências', active: false },
     { section: 'Educação', active: false },
-    // { section: 'Contato', active: false }
+    { section: 'Contato', active: false }
   ];
 
   projectList = [
@@ -61,7 +61,6 @@ export class SobrePage implements OnInit {
       linkWeb: 'https://www.nexia.ai/',
     },
   ];
-
   jobsList = [
     {
       img: './assets/logos/zello-tecnologia-logo.jpeg',
@@ -88,7 +87,7 @@ export class SobrePage implements OnInit {
   educationList = [
     {
       img: './assets/logos/ceub-logo.jpeg',
-      local: 'Centro Universitário de Brasília - UniCEUB',
+      local: 'Centro Universitário de Brasília',
       area: 'Graduado em Análise e Desenvolvimento de Sistemas, 2017.',
       descricao: 'Honrado com o Prêmio de Excelência Acadêmica por obter a nota máxima no Projeto Final e selecionado como padrão de excelência para o repositório acadêmico da faculdade.'
     },

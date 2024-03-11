@@ -43,8 +43,8 @@
 
 ion-content {
   --background: var(--ion-background-color) !important;
-  --padding-top: 100px;
-  --padding-bottom: 90px;
+  --padding-top: 90px;
+  //--padding-bottom: 90px;
   --padding-left: 16px;
   --padding-right: 16px;
 }
@@ -56,6 +56,6 @@ ion-label {
 }
 
 .default-navbar {
-  @apply bg-alternative fixed w-full z-20 top-0 start-0;
+  @apply bg-alternative w-full;
   box-shadow: 0 4.364px 16px -2.182px rgba(0, 0, 0, 0.10);
 }

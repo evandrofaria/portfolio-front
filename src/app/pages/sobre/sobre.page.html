@@ -1,7 +1,7 @@
 <!--<app-default-header></app-default-header>-->
 
 <!-- Header -->
-<nav class="default-navbar">
+<nav class="default-navbar fixed z-20 top-0 start-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a (click)="scrollTo('sobre')" class="flex items-center space-x-3 rtl:space-x-reverse">
 
@@ -26,7 +26,7 @@
 
         <li *ngFor="let item of menuList">
           <a (click)="scrollTo(item.section.toString())"
-             class="font-sans block py-2 px-3 rounded text-white md:p-0 cursor-pointer hover:text-secondary-color hover:underline
+             class=" block py-2 px-3 rounded text-white md:p-0 cursor-pointer hover:text-secondary-color hover:underline
              hover:underline-offset-2">{{item.section}}</a></li>
       </ul>
     </div>
@@ -81,7 +81,7 @@
           PROJETOS</h1>
 
         <!-- CARDS -->
-        <div class="flex flex-wrap -m-2">
+        <div class="flex flex-wrap -m-2 justify-center">
           <div class="max-w-sm bg-white border border-card-color rounded-lg shadow m-2" *ngFor="let item of projectList">
             <a>
               <img class="rounded-t-lg" [src]="item.img"/>
@@ -90,7 +90,7 @@
               <p
                 class="mb-2 flex flex-col text-2xl mobile:text-base font-bold tracking-tight text-card-color text-start">
                 {{item.name}}
-              <span class="badge badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{item.badge}}</span>
+              <span class="daisy-badge daisy-badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{item.badge}}</span>
               </p>
               <p
                 class="mb-3 mobile:text-sm font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
@@ -157,7 +157,7 @@
 
               <div class="flex flex-col">
                 <p class="font-semibold text-white text-lg mobile:text-base">{{item.cargo}}</p>
-                <p class="!text-[#c5c5c5] tracking-[120%] text-base mobile:text-xs">{{item.empresa}}</p>
+                <p class="!text-[#c5c5c5] tracking-tight text-base mobile:text-sm">{{item.empresa}}</p>
                 <span class="mobile:text-xs text-sm">{{item.periodo}}</span>
               </div>
             </ion-item>
@@ -170,7 +170,7 @@
   </div>
 
   <!-- 4st section - Educacao -->
-  <div id="Educação" class="pt-10">
+  <div id="Educação" class="pt-10 pb-14">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
         <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">
@@ -185,7 +185,7 @@
 
               <div class="flex flex-col">
                 <p class="font-semibold text-white text-lg mobile:text-base">{{item.local}}</p>
-                <p class="!text-[#c5c5c5] tracking-[120%] text-base mobile:text-xs">{{item.area}}</p>
+                <p class="!text-[#c5c5c5] text-balance text-base mobile:text-sm">{{item.area}}</p>
               </div>
             </ion-item>
 
@@ -198,12 +198,40 @@
   </div>
 
   <!-- 5st section - Contato -->
-  <!--<div id="Contato" class="pt-16">-->
-  <!--  <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4 bg-alternative w-full bottom-0 start-0">-->
-  <!--    <div class="flex flex-col text-center">-->
-  <!--      <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">CONTATO</h1>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <!--</div>-->
+  <div id="Contato" class="py-6 default-navbar">
+    <footer class="p-4 daisy-footer bg-neutral text-neutral-content items-start justify-between bg-alternative max-w-screen-xl flex flex-wrap mx-auto">
+      <aside>
+        <h6 class="daisy-footer-title desktop:text-base">Contato</h6>
 
+        <div class="flex flex-col">
+          <div class="flex items-center">
+            <ion-icon name="c-mail" class="text-white text-base desktop:text-xl"></ion-icon>
+            <a href="mailto:contato@evandrofaria.dev" class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">contato&#64;evandrofaria.dev</a>
+          </div>
+
+          <div class="flex items-center mt-2">
+            <ion-icon name="c-whatsapp" class="text-white desktop:text-xl text-base"></ion-icon>
+            <a href="https://wa.me/+5561992726341" target="_blank" class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+              (61) 99272-6341</a>
+          </div>
+        </div>
+      </aside>
+      <nav>
+        <h6 class="daisy-footer-title desktop:text-base">Social</h6>
+        <div class="flex items-center">
+          <a href="https://www.linkedin.com/in/evandro-faria/" target="_blank" class="desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+          <ion-icon name="c-linkedin" class="desktop:text-2xl text-base"></ion-icon>
+          </a>
+
+          <a href="https://github.com/evandrofaria" target="_blank" class="ml-4 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+          <ion-icon name="c-github" class="desktop:text-2xl text-base"></ion-icon>
+          </a>
+        </div>
+      </nav>
+
+    </footer>
+
+    <h3 class="text-center text-xs mobile:text-[8px] mt-4">2024 © Evandro Faria - Todos os direitos reservados.</h3>
+  </div>
 </ion-content>
+
