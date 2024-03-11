@@ -1,13 +1,43 @@
-<app-default-header></app-default-header>
+<!--<app-default-header></app-default-header>-->
+
+<nav class="bg-alternative fixed w-full z-20 top-0 start-0">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+    <a (click)="scrollTo('sobre')" class="flex items-center space-x-3 rtl:space-x-reverse">
+
+      <!--@TODO alterar logo-->
+      <img src="assets/logos/evandro-logo.png" class="h-14" alt="Evandro Faria Logo">
+    </a>
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+      <button data-collapse-toggle="navbar-sticky" type="button"
+              class="daisy-btn-link inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-primary md:hidden "
+              aria-controls="navbar-sticky" aria-expanded="false">
+        <span class="sr-only"></span>
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 text-center
+                 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-alternative">
+
+        <li *ngFor="let item of menuList">
+          <a (click)="scrollTo(item.section.toString())"
+             class="font-sans block py-2 px-3 rounded text-white md:p-0 cursor-pointer hover:text-secondary-color hover:underline
+             hover:underline-offset-2">{{item.section}}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <ion-content [fullscreen]="true">
 
-  <ng-container #sobre>
-    <!--<div class="content-center">-->
-
-
+  <!-- 1st section - Sobre -->
+  <div id="Sobre" class="pt-6">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
-      <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800 mt-4"
+      <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800"
            src="assets/avatar-sticker.png" alt="Rounded avatar">
 
       <p
@@ -17,18 +47,16 @@
         Especializado em atender demandas complexas, adaptável e escalável.
       </p>
 
+      <!--<div class="flex flex-row pt-10 justify-between">-->
+      <!--  <ion-button mode="ios" color="secondary" shape="round" class="primary-button mr-4 h-16 my-0 mb-0">Download CV-->
+      <!--  </ion-button>-->
+      <!--  <ion-button mode="ios" color="primary" shape="round" fill="outline" class="h-16 m-0">Fale comigo</ion-button>-->
+      <!--</div>-->
 
-      <div class="flex flex-row mt-8 justify-between">
-        <ion-button mode="ios" color="secondary" shape="round" class="primary-button mr-4 h-16 my-0 mb-0">Download CV</ion-button>
-        <ion-button mode="ios" color="primary" shape="round" fill="outline" class="h-16 m-0">Fale comigo</ion-button>
+      <div class="flex flex-col text-center pt-10">
+        <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6">HABILIDADES</h1>
 
-      </div>
-
-      <div class="flex flex-col text-center mt-6">
-
-        <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg">HABILIDADES</h1>
-
-        <div class="grid grid-cols-5 desktop:grid-cols-10 items-center mt-2">
+        <div class="inline-flex flex-wrap justify-center items-center">
           <img src="assets/logos/html5-logo.png" alt="HTML5 Logo" class="m-2">
           <img src="assets/logos/css-logo.png" alt="CSS3 Logo" class="m-2">
           <img src="assets/logos/js-logo.png" alt="Javascript Logo" class="m-2">
@@ -40,21 +68,112 @@
           <img src="assets/logos/react-logo.png" alt="React Logo" class="m-2">
           <img src="assets/logos/next-logo.png" alt="Next.js Logo" class="m-2">
         </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- 2st section - Projetos -->
+  <div id="Projetos" class="pt-16">
+    <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
+      <div class="flex flex-col text-center">
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">PROJETOS</h1>
+
+        <!-- CARDS -->
+        <div class="inline-flex flex-wrap justify-center items-center">
+
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-4"
+            *ngFor="let item of projectList">
+            <a href="#">
+              <img class="rounded-t-lg" [src]="item.img"/>
+            </a>
+            <div class="p-5">
+              <a href="#">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{item.name}}</h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{item.description}}</p>
+              <a href="#"
+                 class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700
+                        rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600
+                        dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                     fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3st section - Experiencias -->
+  <div id="Experiencias" class="pt-16">
+    <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
+      <div class="flex flex-col text-center">
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">EXPERIÊNCIAS</h1>
+
+        <!-- EXPERIENCIAS -->
+        <ng-container *ngFor="let item of jobsList">
+          <ion-list>
+            <ion-item class="ion-no-padding" lines="none">
+              <ion-thumbnail slot="start">
+                <img [src]="item.img"/>
+              </ion-thumbnail>
+              <ion-label mode="md" class="ion-no-padding no-padding">
+                <p class="font-semibold !text-white !text-lg">{{item?.cargo}}</p>
+                <p class="!text-[#c5c5c5] tracking-[120%] !text-base">
+                  {{item?.empresa}}<br/>
+                  <span class="text-xs leading-loose">{{item?.periodo}}</span>
+                </p>
+
+              </ion-label>
+            </ion-item>
+            <p class="text-justify text-sm">{{item?.atribuicoes}}
+            </p>
+          </ion-list>
+        </ng-container>
 
       </div>
-
-
     </div>
+  </div>
 
+  <!-- 4st section - Educacao -->
+  <div id="Educacao" class="pt-16">
+    <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
+      <div class="flex flex-col text-center">
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">EDUCAÇÃO</h1>
 
-    <!--<div class="flex flex-row">-->
-    <!--  <button class="btn btn-primary">Download CV</button>-->
-    <!--  <button class="btn btn-primary ml-8">Entrar em contato</button>-->
-    <!--</div>-->
+        <ng-container *ngFor="let item of educationList">
+          <ion-list>
+            <ion-item class="ion-no-padding" lines="none">
+              <ion-thumbnail slot="start">
+                <img [src]="item.img"/>
+              </ion-thumbnail>
+              <ion-label mode="md">
+                <p class="font-semibold !text-white text-lg">{{item.local}}</p>
+                <p class="!text-[#c5c5c5] tracking-[120%]">{{item.area}}</p>
+              </ion-label>
+            </ion-item>
 
+            <p class="text-justify">{{item.descricao}}</p>
+          </ion-list>
+        </ng-container>
 
-    <!--</div>-->
-  </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5st section - Contato -->
+  <div id="Contato" class="pt-16">
+    <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
+      <div class="flex flex-col text-center">
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6">CONTATO</h1>
+      </div>
+    </div>
+  </div>
 
 </ion-content>

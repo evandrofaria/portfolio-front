@@ -8,6 +8,7 @@ import { SobrePageRoutingModule } from './sobre-routing.module';
 
 import { SobrePage } from './sobre.page';
 import { ComponentsModule } from '../../shared/components/components.module';
+import { ContatoPageModule } from '../contato/contato.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,11 @@ import { ComponentsModule } from '../../shared/components/components.module';
     FormsModule,
     IonicModule,
     SobrePageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    ContatoPageModule
+  ],
+  exports: [
+    SobrePage
   ],
   declarations: [SobrePage]
 })

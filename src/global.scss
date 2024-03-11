@@ -56,6 +56,12 @@ ion-content {
   height: 100%;
 }
 
+ion-label {
+  &.no-padding {
+    --inner-padding-end: 0;
+  }
+}
+
 //.primary-button {
 //  @apply h-16 rounded-[50px] bg-secondary-color text-primary py-4 px-7;
 //}
