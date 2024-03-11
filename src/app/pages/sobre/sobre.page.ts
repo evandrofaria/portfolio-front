@@ -9,8 +9,8 @@ export class SobrePage implements OnInit {
     { section: 'Sobre', active: true },
     { section: 'Projetos', active: false },
     { section: 'Experiencias', active: false },
-    { section: 'Educação', active: false },
-    { section: 'Contato', active: false }
+    { section: 'Educacao', active: false },
+    // { section: 'Contato', active: false }
   ];
 
   projectList = [
