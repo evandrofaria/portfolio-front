@@ -12,11 +12,10 @@ export class SobrePage implements OnInit {
     { section: 'Educação', active: false },
     { section: 'Contato', active: false }
   ];
-
   projectList = [
     {
       img: './assets/investsus-card.png',
-      name: 'InvestSUS',
+      name: 'InvestSUS Cidadão',
       badge: 'Ministério da Saúde',
       description: 'O InvestSUS Cidadão melhora o acesso a informações de saúde e transparência em repasses do Fundo Nacional de Saúde, convidando a sociedade a acompanhar a aplicação de recursos no SUS, com detalhes acessíveis sobre a destinação de verbas federais.',
       linkApple: 'https://apps.apple.com/br/app/investsus-cidad%C3%A3o/id1471696623',
@@ -42,7 +41,7 @@ export class SobrePage implements OnInit {
       img: './assets/conectesus-card.png',
       name: 'Meu SUS Digital',
       badge: 'Ministério da Saúde',
-      description: 'O Meu SUS Digital foi desenvolvido para gerenciar a saúde  pessoal do usuário, permitindo o acompanhamento de histórico clínico, localização de serviços de saúde, certificado de vacinação, gerenciamento de adesões a programas e localização de serviços.',
+      description: 'O Meu SUS Digital é a porta de acesso aos serviços do Sistema Único de Saúde (SUS). O aplicativo foi desenvolvido para gerenciar a saúde pessoal do usuário, permitindo o acompanhamento de histórico de exames, vacinas, medicamentos, localização de serviços e emissão de certificados.',
       linkApple: 'https://apps.apple.com/br/app/meu-sus-digital/id1045754608',
       linkGoogle: 'https://play.google.com/store/apps/details?id=br.gov.datasus.cnsdigital',
     },
@@ -98,6 +97,18 @@ export class SobrePage implements OnInit {
       descricao: 'Curso intensivo de 5 meses em Columbia, Maryland - EUA, com foco no aprimoramento da língua inglesa, incluindo habilidades de leitura, escrita, fala e compreensão gramatical. Adaptado para estudantes e profissionais visando a excelência no inglês acadêmico e empresarial.'
     },
   ];
+  skillsList = [
+    { img: './assets/logos/html5-logo.png' },
+    { img: './assets/logos/css-logo.png' },
+    { img: './assets/logos/js-logo.png' },
+    { img: './assets/logos/ts-logo.png' },
+    { img: './assets/logos/angular-logo.png' },
+    { img: './assets/logos/ionic-logo.png' },
+    { img: './assets/logos/tailwind-logo.png' },
+    { img: './assets/logos/spring-logo.png' },
+    { img: './assets/logos/react-logo.png' },
+    { img: './assets/logos/next-logo.png' },
+  ];
 
   constructor() { }
 
@@ -119,5 +130,4 @@ export class SobrePage implements OnInit {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
-
 }

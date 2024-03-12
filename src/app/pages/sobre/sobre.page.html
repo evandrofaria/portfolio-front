@@ -1,12 +1,11 @@
-<!--<app-default-header></app-default-header>-->
-
 <!-- Header -->
 <nav class="default-navbar fixed z-20 top-0 start-0">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a (click)="scrollTo('sobre')" class="flex items-center space-x-3 rtl:space-x-reverse">
 
       <!--@TODO alterar logo-->
-      <img src="assets/logos/evandro-logo.svg" class="h-14" alt="Evandro Faria Logo">
+      <a href="https://evandrofaria.dev/"><img src="assets/logos/evandro-logo.svg" class="h-14"
+                                               alt="Evandro Faria Logo"></a>
     </a>
     <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       <button data-collapse-toggle="navbar-sticky" type="button"
@@ -34,40 +33,23 @@
 </nav>
 
 <ion-content [fullscreen]="true">
-
   <!-- 1st section - Sobre -->
   <div id="Sobre" class="pt-6">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800"
            src="assets/avatar-sticker.png" alt="Rounded avatar">
-
       <p
-        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-wrap max-w-[740px]">
+        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-balance max-w-[740px]">
         Desenvolvedor de software experiente em soluções inovadoras para o governo federal,
-        incluindo Ministério da Saúde, BRB e Ministério do Meio Ambiente.<br/>
+        incluindo Ministério da Saúde, BRB e Ministério do Meio Ambiente.
         Especializado em atender demandas complexas, adaptável e escalável.
       </p>
-
-      <!--<div class="flex flex-row pt-10 justify-between">-->
-      <!--  <ion-button mode="ios" color="secondary" shape="round" class="primary-button mr-4 h-16 my-0 mb-0">Download CV-->
-      <!--  </ion-button>-->
-      <!--  <ion-button mode="ios" color="primary" shape="round" fill="outline" class="h-16 m-0">Fale comigo</ion-button>-->
-      <!--</div>-->
 
       <div class="flex flex-col text-center pt-10">
         <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6 mobile:mb-4">HABILIDADES</h1>
 
         <div class="inline-flex flex-wrap justify-center items-center">
-          <img src="assets/logos/html5-logo.png" alt="HTML5 Logo" class="m-2">
-          <img src="assets/logos/css-logo.png" alt="CSS3 Logo" class="m-2">
-          <img src="assets/logos/js-logo.png" alt="Javascript Logo" class="m-2">
-          <img src="assets/logos/ts-logo.png" alt="Typescript Logo" class="m-2">
-          <img src="assets/logos/angular-logo.png" alt="HTML5 Logo" class="m-2">
-          <img src="assets/logos/ionic-logo.png" alt="Ionic Logo" class="m-2">
-          <img src="assets/logos/tailwind-logo.png" alt="TailwindCSS Logo" class="m-2">
-          <img src="assets/logos/spring-logo.png" alt="Spring Logo" class="m-2">
-          <img src="assets/logos/react-logo.png" alt="React Logo" class="m-2">
-          <img src="assets/logos/next-logo.png" alt="Next.js Logo" class="m-2">
+          <img *ngFor="let item of skillsList" [src]="item.img" class="m-2">
         </div>
       </div>
     </div>
@@ -82,7 +64,8 @@
 
         <!-- CARDS -->
         <div class="flex flex-wrap -m-2 justify-center">
-          <div class="max-w-sm bg-white border border-card-color rounded-lg shadow m-2" *ngFor="let item of projectList">
+          <div class="max-w-sm bg-white border border-card-color rounded-lg shadow m-2"
+               *ngFor="let item of projectList">
             <a>
               <img class="rounded-t-lg" [src]="item.img"/>
             </a>
@@ -90,14 +73,15 @@
               <p
                 class="mb-2 flex flex-col text-2xl mobile:text-base font-bold tracking-tight text-card-color text-start">
                 {{item.name}}
-              <span class="daisy-badge daisy-badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{item.badge}}</span>
+                <span
+                  class="daisy-badge daisy-badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{item.badge}}</span>
               </p>
               <p
                 class="mb-3 mobile:text-sm font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
               <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
 
                 <a *ngIf="item.linkApple" [href]="item.linkApple" target="_blank"
-                   class="w-full sm:w-auto hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
+                   class="w-full sm:w-1/2 hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple"
                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                     <path fill="currentColor"
@@ -110,7 +94,7 @@
                 </a>
 
                 <a *ngIf="item.linkGoogle" [href]="item.linkGoogle" target="_blank"
-                   class="w-full sm:w-auto hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
+                   class="w-full sm:w-1/2 hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
                        data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                     <path fill="currentColor"
@@ -124,7 +108,7 @@
                 </a>
 
                 <a *ngIf="item.linkWeb && !item.linkGoogle" [href]="item.linkWeb" target="_blank"
-                   class="w-full sm:w-auto hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
+                   class="w-full sm:w-full hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <ion-icon name="globe-outline" class="me-3 w-7 h-7"></ion-icon>
 
                   <div class="text-left rtl:text-right">
@@ -164,7 +148,6 @@
             <p class="text-justify mobile:text-sm text-base mt-2 tracking-tight" [innerHTML]="item.atribuicoes"></p>
           </div>
         </ng-container>
-
       </div>
     </div>
   </div>
@@ -173,8 +156,7 @@
   <div id="Educação" class="pt-10 pb-14">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
-        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">
-          EDUCAÇÃO</h1>
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">EDUCAÇÃO</h1>
 
         <ng-container *ngFor="let item of educationList">
           <div class="mb-4 last:mb-0">
@@ -192,26 +174,28 @@
             <h2 class="text-justify mobile:text-sm text-base mt-2 tracking-tight" [innerHTML]="item.descricao"></h2>
           </div>
         </ng-container>
-
       </div>
     </div>
   </div>
 
   <!-- 5st section - Contato -->
   <div id="Contato" class="py-6 default-navbar">
-    <footer class="p-4 daisy-footer bg-neutral text-neutral-content items-start justify-between bg-alternative max-w-screen-xl flex flex-wrap mx-auto">
+    <footer
+      class="p-4 daisy-footer bg-neutral text-neutral-content items-start justify-between bg-alternative max-w-screen-xl flex flex-wrap mx-auto">
       <aside>
         <h6 class="daisy-footer-title desktop:text-base">Contato</h6>
 
         <div class="flex flex-col">
           <div class="flex items-center">
             <ion-icon name="c-mail" class="text-white text-base desktop:text-xl"></ion-icon>
-            <a href="mailto:contato@evandrofaria.dev" class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">contato&#64;evandrofaria.dev</a>
+            <a href="mailto:contato@evandrofaria.dev"
+               class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">contato&#64;evandrofaria.dev</a>
           </div>
 
           <div class="flex items-center mt-2">
             <ion-icon name="c-whatsapp" class="text-white desktop:text-xl text-base"></ion-icon>
-            <a href="https://wa.me/+5561992726341" target="_blank" class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+            <a href="https://wa.me/+5561992726341" target="_blank"
+               class="ml-2 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
               (61) 99272-6341</a>
           </div>
         </div>
@@ -219,12 +203,14 @@
       <nav>
         <h6 class="daisy-footer-title desktop:text-base">Social</h6>
         <div class="flex items-center">
-          <a href="https://www.linkedin.com/in/evandro-faria/" target="_blank" class="desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
-          <ion-icon name="c-linkedin" class="desktop:text-2xl text-base"></ion-icon>
+          <a href="https://www.linkedin.com/in/evandro-faria/" target="_blank"
+             class="desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+            <ion-icon name="c-linkedin" class="desktop:text-2xl text-base"></ion-icon>
           </a>
 
-          <a href="https://github.com/evandrofaria" target="_blank" class="ml-4 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
-          <ion-icon name="c-github" class="desktop:text-2xl text-base"></ion-icon>
+          <a href="https://github.com/evandrofaria" target="_blank"
+             class="ml-4 desktop:text-sm text-xs hover:text-secondary-color cursor-pointer hover:underline">
+            <ion-icon name="c-github" class="desktop:text-2xl text-base"></ion-icon>
           </a>
         </div>
       </nav>
@@ -234,4 +220,3 @@
     <h3 class="text-center text-xs mobile:text-[8px] mt-4">2024 © Evandro Faria - Todos os direitos reservados.</h3>
   </div>
 </ion-content>
-
