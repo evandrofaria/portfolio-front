@@ -1,3 +1,7 @@
+### Links: 
+* [Protótipo - Figma](https://www.figma.com/file/enNhGn9oPSV64VbkwEtXq3/Evandro-Faria---Developer-Portfolio?type=design&node-id=0%3A1&mode=design&t=mYE81QX0xQ19Rwf9-1)
+* [Web URL](https://www.evandrofaria.dev)
+
 ```
 Ionic:
 
@@ -25,4 +29,6 @@ System:
    NodeJS : v20.11.1 (/Users/evandrofaria/.nvm/versions/node/v20.11.1/bin/node)
    npm    : 10.2.4
    OS     : macOS Ventura
+```
+
 
