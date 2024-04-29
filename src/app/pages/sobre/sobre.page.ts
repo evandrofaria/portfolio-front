@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sobre.page.html',
 })
 export class SobrePage implements OnInit {
+  resumeSection = `Desenvolvedor de software experiente em criar soluções inovadoras para clientes como o Ministério da Saúde, BRB e Ministério do Meio Ambiente. Especializado em atender demandas complexas e desenvolver sistemas adaptáveis e escaláveis para diversas organizações.`;
   menuList = [
     { section: 'Sobre', active: true },
     { section: 'Projetos', active: false },

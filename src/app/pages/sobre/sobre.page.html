@@ -26,7 +26,7 @@
         <li *ngFor="let item of menuList">
           <a (click)="scrollTo(item.section.toString())"
              class=" block py-2 px-3 rounded text-white md:p-0 cursor-pointer hover:text-secondary-color hover:underline
-             hover:underline-offset-2">{{item.section}}</a></li>
+             hover:underline-offset-2">{{ item.section }}</a></li>
       </ul>
     </div>
   </div>
@@ -39,11 +39,8 @@
       <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800"
            src="assets/avatar-sticker.png" alt="Rounded avatar">
       <p
-        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-balance max-w-[740px]">
-        Desenvolvedor de software experiente em soluções inovadoras para o governo federal,
-        incluindo Ministério da Saúde, BRB e Ministério do Meio Ambiente.
-        Especializado em atender demandas complexas, adaptável e escalável.
-      </p>
+        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-balance max-w-[740px]"
+        [innerHtml]="resumeSection"></p>
 
       <div class="flex flex-col text-center pt-10">
         <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6 mobile:mb-4">HABILIDADES</h1>
@@ -72,15 +69,15 @@
             <div class="p-5">
               <p
                 class="mb-2 flex flex-col text-2xl mobile:text-base font-bold tracking-tight text-card-color text-start">
-                {{item.name}}
+                {{ item.name }}
                 <span
-                  class="daisy-badge daisy-badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{item.badge}}</span>
+                  class="daisy-badge daisy-badge-outline mt-1 bg-none border-card-color text-card-color font-medium">{{ item.badge }}</span>
               </p>
               <p
-                class="mb-3 mobile:text-sm font-normal text-gray-700 dark:text-gray-400 text-justify">{{item.description}}</p>
+                class="mb-3 mobile:text-sm font-normal text-gray-700 dark:text-gray-400 text-justify">{{ item.description }}</p>
               <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
 
-                <a *ngIf="item.linkApple" [href]="item.linkApple" target="_blank"
+                <a *ngIf="item?.linkApple" [href]="item?.linkApple" target="_blank"
                    class="w-full sm:w-1/2 hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple"
                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -93,7 +90,7 @@
                   </div>
                 </a>
 
-                <a *ngIf="item.linkGoogle" [href]="item.linkGoogle" target="_blank"
+                <a *ngIf="item?.linkGoogle" [href]="item.linkGoogle" target="_blank"
                    class="w-full sm:w-1/2 hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab"
                        data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -107,7 +104,7 @@
                   </div>
                 </a>
 
-                <a *ngIf="item.linkWeb && !item.linkGoogle" [href]="item.linkWeb" target="_blank"
+                <a *ngIf="item?.linkWeb && !item?.linkGoogle" [href]="item?.linkWeb" target="_blank"
                    class="w-full sm:w-full hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black">
                   <ion-icon name="globe-outline" class="me-3 w-7 h-7"></ion-icon>
 
@@ -140,9 +137,9 @@
               </ion-thumbnail>
 
               <div class="flex flex-col">
-                <p class="font-semibold text-white text-lg mobile:text-base">{{item.cargo}}</p>
-                <p class="!text-[#c5c5c5] tracking-tight text-base mobile:text-sm">{{item.empresa}}</p>
-                <span class="mobile:text-xs text-sm">{{item.periodo}}</span>
+                <p class="font-semibold text-white text-lg mobile:text-base">{{ item.cargo }}</p>
+                <p class="!text-[#c5c5c5] tracking-tight text-base mobile:text-sm">{{ item.empresa }}</p>
+                <span class="mobile:text-xs text-sm">{{ item.periodo }}</span>
               </div>
             </ion-item>
             <p class="text-justify mobile:text-sm text-base mt-2 tracking-tight" [innerHTML]="item.atribuicoes"></p>
@@ -156,7 +153,8 @@
   <div id="Educação" class="pt-10 pb-14">
     <div class="max-w-screen-xl flex flex-col items-center justify-center mx-auto px-4">
       <div class="flex flex-col text-center">
-        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">EDUCAÇÃO</h1>
+        <h1 class="text-3xl font-bold tracking-[2.4px] mobile:text-xl mb-6 mobile:mb-4 underline !underline-offset-4">
+          EDUCAÇÃO</h1>
 
         <ng-container *ngFor="let item of educationList">
           <div class="mb-4 last:mb-0">
@@ -166,8 +164,8 @@
               </ion-thumbnail>
 
               <div class="flex flex-col">
-                <p class="font-semibold text-white text-lg mobile:text-base">{{item.local}}</p>
-                <p class="!text-[#c5c5c5] text-balance text-base mobile:text-sm">{{item.area}}</p>
+                <p class="font-semibold text-white text-lg mobile:text-base">{{ item.local }}</p>
+                <p class="!text-[#c5c5c5] text-balance text-base mobile:text-sm">{{ item.area }}</p>
               </div>
             </ion-item>
 
