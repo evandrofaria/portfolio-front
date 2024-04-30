@@ -81,7 +81,7 @@ export class SobrePage implements OnInit {
       cargo: 'Analista de infraestrutura',
       empresa: 'Odebrecht',
       periodo: '2015 - 2017',
-      atribuicoes: 'Responsável por desenvolver sites e aplicações usando C# e ASP.NET. Familiarizado com plataformas CMS, incluindo WordPress e Elementor, além de criar e manter bancos de dados SQL Server.'
+      atribuicoes: 'Administração e configuração de redes, incluindo criação de infraestrutura. Suporte e manutenção de computadores e servidores em ambientes Linux, Windows e Windows Server. Atuação direta em suporte ao usuário, assegurando a eficiência e segurança das soluções de TI implementadas.'
     }
   ];
   educationList = [
