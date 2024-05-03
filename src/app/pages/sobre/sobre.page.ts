@@ -5,7 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sobre.page.html',
 })
 export class SobrePage implements OnInit {
-  resumeSection = `Desenvolvedor de software experiente em criar soluções inovadoras para clientes como o Ministério da Saúde, BRB e Ministério do Meio Ambiente. Especializado em atender demandas complexas e desenvolver sistemas adaptáveis e escaláveis para diversas organizações.`;
+  resumeSection = `Desenvolvedor Fullstack, graduado em Análise e Desenvolvimento de Sistemas, com cinco anos de experiência em desenvolvimento de software e uma verdadeira paixão pelo design de interfaces e experiência do usuário.<br/> 
+                          Especializado em Angular, TypeScript, Ionic e Java.<br/> 
+                          Dedico-me a compreender e reproduzir completamente cada protótipo com precisão, enfatizando a importância de cada elemento de design.<br/> 
+                          Meu objetivo é desenvolver interfaces que atendam tanto aos requisitos estéticos quanto funcionais, garantindo uma navegação fluida e intuitiva para o usuário, sempre buscando equilibrar beleza e funcionalidade, priorizando as necessidades do cliente e do usuário final.`;
   menuList = [
     { section: 'Sobre', active: true },
     { section: 'Projetos', active: false },

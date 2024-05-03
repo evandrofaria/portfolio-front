@@ -39,8 +39,21 @@
       <img class="w-64 h-64 rounded-full bg-gradient-to-b from-gray-400 to-gray-800"
            src="assets/avatar-sticker.png" alt="Rounded avatar">
       <p
-        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-balance max-w-[740px]"
+        class="resume-section text-center text-lg mobile:text-base font-light tracking-tight mt-4 text-balance break-words max-w-[740px]"
         [innerHtml]="resumeSection"></p>
+
+      <div class="flex max-w-screen-xl pt-6">
+        <a class="cursor-pointer hover:animate-pulse w-[170px] h-[56px] hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black" href="https://perfil.evandrofaria.dev/" target="_blank">
+          <ion-icon name="document-text-outline" class="mr-2 text-xl"></ion-icon>
+          Resumo
+        </a>
+
+        <a class="cursor-pointer hover:animate-pulse w-[170px] h-[56px] hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black ml-4" href="https://github.com/evandrofaria/portfolio-front" target="_blank">
+          <ion-icon name="code-slash-outline" class="mr-2 text-xl"></ion-icon>
+          Código Fonte
+        </a>
+      </div>
+
 
       <div class="flex flex-col text-center pt-10">
         <h1 class="text-xl font-bold tracking-[2.4px] mobile:text-lg mb-6 mobile:mb-4">HABILIDADES</h1>
