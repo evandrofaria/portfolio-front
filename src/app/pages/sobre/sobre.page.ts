@@ -81,7 +81,7 @@ export class SobrePage {
       img: AssetPaths.zelloTecnologiaLogo,
       cargo: 'Desenvolvedor Full Stack',
       empresa: 'Zello Tecnologia',
-      periodo: '06/2021 - 12/2023',
+      periodo: '2021 - 2023',
       atribuicoes: 'Desenvolvimento de softwares PWA/Mobile usando Ionic, Angular, TypeScript e Java com Spring Boot. Responsável por build e publicação de aplicativos para iOS e Android, com proficiência em ferramentas de prototipagem como Figma. Experiência em versionamento de código utilizando Git e GitFlow, e aplicação de metodologias ágeis e suas cerimônias.'
     },
     {
