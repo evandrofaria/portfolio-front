@@ -74,28 +74,28 @@ export class SobrePage {
       img: AssetPaths.imagemGeoLogo,
       cargo: 'Desenvolvedor de software',
       empresa: 'Imagem Geosistemas',
-      periodo: '06/2024 - o momento',
+      periodo: 'jun/2024 - o momento',
       atribuicoes: 'Desenvolvimento de aplicações front-end no setor de inovação, utilizando React. Responsável pela criação de soluções integradas com ArcGIS (plataforma GIS da Esri), aprimorando a gestão de dados geoespaciais e oferecendo análises espaciais avançadas. Experiência em mapas, dados geográficos e análise espacial.'
     },
     {
       img: AssetPaths.zelloTecnologiaLogo,
       cargo: 'Desenvolvedor Full Stack',
       empresa: 'Zello Tecnologia',
-      periodo: '2021 - 2023',
+      periodo: 'nov/2021 - dez/2023',
       atribuicoes: 'Desenvolvimento de softwares PWA/Mobile usando Ionic, Angular, TypeScript e Java com Spring Boot. Responsável por build e publicação de aplicativos para iOS e Android, com proficiência em ferramentas de prototipagem como Figma. Experiência em versionamento de código utilizando Git e GitFlow, e aplicação de metodologias ágeis e suas cerimônias.'
     },
     {
       img: AssetPaths.noxLogo,
       cargo: 'Desenvolvedor Web',
       empresa: 'Nox Sistemas',
-      periodo: '2019 - 2021',
+      periodo: 'dez/2019 - mai/2021',
       atribuicoes: 'Atuação no desenvolvimento de sites e aplicações web com C# e ASP.NET. Experiência com CMS como WordPress e Elementor, e gestão de banco de dados SQL Server.'
     },
     {
       img: AssetPaths.odebrechtLogo,
       cargo: 'Analista de infraestrutura',
       empresa: 'Odebrecht',
-      periodo: '2015 - 2017',
+      periodo: 'out/2015 - jul/2017',
       atribuicoes: 'Administração e configuração de redes, incluindo criação de infraestrutura. Suporte e manutenção de computadores e servidores em ambientes Linux, Windows e Windows Server. Atuação direta em suporte ao usuário, assegurando a eficiência e segurança das soluções de TI implementadas.'
     }
   ];
