@@ -35,7 +35,11 @@
         <li *ngFor="let item of menuList">
           <a
             (click)="scrollTo(item.section)"
-            class="block py-2 px-3 rounded text-white md:p-0 cursor-pointer hover:text-secondary-color hover:underline hover:underline-offset-2"
+            [ngClass]="{
+              'block py-2 px-3 rounded md:p-0 cursor-pointer hover:text-secondary-color hover:underline hover:underline-offset-2': true,
+              'text-white': !item.active,
+              'text-secondary-color underline-offset-2': item.active
+            }"
           >
             {{ item.section }}
           </a>
@@ -79,23 +83,32 @@
       </div>
 
       <!-- Botões: Resumo / Código Fonte -->
-      <div class="flex max-w-screen-xl my-8">
+      <div class="flex my-8 gap-4 mobile:flex-col">
         <a
-          class="cursor-pointer hover:animate-pulse w-[170px] h-[56px] hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black"
+          class="cursor-pointer hover:animate-pulse h-[56px] hover:bg-gray-700 text-white hover:underline-offset-2 hover:text-secondary rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black"
           href="https://perfil.evandrofaria.dev/"
           target="_blank"
         >
           <ion-icon name="document-text-outline" class="mr-2 text-xl"></ion-icon>
-          Resumo
+          Visualizar Currículo
         </a>
 
         <a
-          class="cursor-pointer hover:animate-pulse w-[170px] h-[56px] hover:bg-gray-700 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black ml-4"
+          class="cursor-pointer hover:animate-pulse h-[56px] hover:bg-gray-700 text-white hover:underline-offset-2 hover:text-secondary rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black"
+          href="https://www.figma.com/design/enNhGn9oPSV64VbkwEtXq3/Evandro-Faria---Developer-Portfolio?node-id=0-1&p=f"
+          target="_blank"
+        >
+          <ion-icon name="logo-figma" class="mr-2 text-xl"></ion-icon>
+          Visualizar Protótipo
+        </a>
+
+        <a
+          class="cursor-pointer hover:animate-pulse h-[56px] hover:bg-gray-700 text-white hover:underline-offset-2 hover:text-secondary rounded-lg inline-flex items-center justify-center px-4 py-2.5 bg-black"
           href="https://github.com/evandrofaria/portfolio-front"
           target="_blank"
         >
           <ion-icon name="code-slash-outline" class="mr-2 text-xl"></ion-icon>
-          Código Fonte
+          Visualizar Código-Fonte
         </a>
       </div>
 
@@ -358,7 +371,7 @@
     </footer>
 
     <h3 class="text-center text-xs mobile:text-[8px] mt-4">
-      2024 © Evandro Faria - Todos os direitos reservados.
+      2025 © Evandro Faria - Todos os direitos reservados.
     </h3>
   </div>
 </ion-content>
