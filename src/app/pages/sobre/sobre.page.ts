@@ -75,7 +75,7 @@ export class SobrePage {
       cargo: 'Desenvolvedor de software',
       empresa: 'Imagem Geosistemas',
       periodo: 'jun/2024 - o momento',
-      atribuicoes: 'Desenvolvimento de aplicações front-end no setor de inovação, utilizando React. Responsável pela criação de soluções integradas com ArcGIS (plataforma GIS da Esri), aprimorando a gestão de dados geoespaciais e oferecendo análises espaciais avançadas. Experiência em mapas, dados geográficos e análise espacial.'
+      atribuicoes: 'Desenvolvimento de aplicações front-end usando React, integradas ao ArcGIS (plataforma GIS da Esri) para aprimorar a gestão de dados geoespaciais e oferecer análises espaciais avançadas. Responsável pela implementação de soluções utilizando IA generativa, otimizando processos de mapeamento e visualização de dados. Experiência em mapas, dados geográficos e análise espacial.'
     },
     {
       img: AssetPaths.zelloTecnologiaLogo,
